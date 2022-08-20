@@ -1,8 +1,21 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Macondo&family=Poppins&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+
+::selection {
+  background: rgb(100, 102, 237);
+}
+
+h1::selection,p::selection,strong::selection,a::selection {
+  color: white;
+}
+
+body {
+  font-family: 'Poppins', cursive;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -1,38 +1,303 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Macondo&family=Poppins&display=swap');
+
+:root {
+	--br-blobby: 50%;
+	--br-blobby-before: 50%;
+	--br-blobby-after: 50%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  width: 100vw;
+  height: 10vh;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.logo {
+  margin-left: 80px;
+}
+
+.logo img {
+  width: 250px;
+}
+
+.right {
+  width: 50%;
+}
+
+.right ul li {
+  list-style: none;
+}
+
+.right ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-top: 40px;
+  gap: 70px;
+}
+
+.text-heading {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-heading h1 {
+  font-weight: 400;
+  font-family: 'Macondo', cursive;
+  font-size: 80px;
+  position: relative;
+}
+
+.graphic-heading {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.inspiration-1 {
+  position: absolute;
+  left: 100px;
+  top: 200px;
+  font-size: 20px;
+  width: 150px;
+}
+
+.inspiration-2 {
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  font-size: 20px;
+  width: 187px;
+  text-align: right;
+}
+
+.graphic-heading img {
+  width: 500px;
+}
+
+.brainless {
+  position: absolute;
+  top: -30px;
+  right: 140px;
+  z-index: 1;
+}
+
+.brain-icon {
+	animation: rotate 5s linear infinite;
+	border: 1px solid rgb(44, 102, 211);
+	border-radius: var(--br-blobby);
+	position: absolute;
+	height: 150px;
+	width: 130px;
+	transition: 0.3s linear;
+  top: -65px;
+  right: 120px;
+}
+
+.brain-icon::after {
+	content: '';
+	border: 1px solid rgb(147, 173, 222);
+	border-radius: var(--br-blobby-after);
+	position: absolute;
+	opacity: 0.5;
+	top: -2%;
+	left: -2%;
+	height: 104%;
+	width: 104%;
+	transition: 0.3s linear;
+}
+
+.brain-icon::before {
+	content: '';
+	border: 1px solid cornflowerblue;
+	border-radius: var(--br-blobby-before);
+	position: absolute;
+	opacity: 0.5;
+	top: -4%;
+	left: -4%;
+	height: 108%;
+	width: 108%;
+	transition: 0.3s linear;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.input {
+  padding: 15px 10px;
+  width: 80%;
+  font-size: 20px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  outline: none;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+}
+
+.btn-right {
+  position: fixed;
+  right: 0;
+}
+
+.input-container {
+  background-color: cornflowerblue;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.send-btn {
+  padding: 15px;
+  background-color: rgb(23, 76, 175);
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px;
+  width: 60px;
+  margin-right: 10px;
+}
+
+.send-btn:hover {
+  cursor: pointer;
+}
+
+.message-container {
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.messageboard {
+  margin: 0px 50px;
+  width: 80%;
+  margin-top: 30px;
+  padding-bottom: 90px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.left {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.bg-right {
+  background: cornflowerblue;
+}
+
+.bg-left {
+  background: rgb(115, 115, 115);
+}
+
+.blob {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  background-color: black;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  margin: 0px 60px;
+  height: 50%;
+}
+
+.about-column {
+  width: 300px;
+}
+
+.about-column img {
+  width: 100px;
+}
+
+.power {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.power p {
+  font-family: 'Aboreto';
+}
+
+.bada {
+  font-size: 40px;
+}
+
+.chhota {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.power-content {
+  position: absolute;
+  top: 260px;
+  left: 100px;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.power-content p {
+  width: 300px;
+  text-align: left;
+}
+
+.learnmore {
+  position: absolute;
+  top: 310px;
+  left: 100px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
